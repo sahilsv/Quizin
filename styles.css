@@ -1,0 +1,108 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@500&display=swap'); */
+
+*, *::before,*::after {
+    box-sizing: border-box;
+    font-family:'Signika Negative', sans-serif;
+}
+
+:root {
+    --hue-neutral: 200;
+    --hue-wrong: 0;
+    --hue-correct: 145;
+}
+
+body{
+    --hue: var(--hue-neutral);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(var(--hue), 100%, 20%);
+}
+
+#question {
+    margin-left: 17px;
+    margin-top: 15px;
+    font-size: 35px;
+}
+
+body.correct {
+    --hue : var(--hue-correct);
+}
+
+body.wrong {
+    --hue : var(--hue-wrong);
+}
+
+.container {
+    width: 800px;
+    max-width: 80%;
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    
+    margin-top: 20px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* .btn {
+    --hue : var(--hue-neutral);
+    border: 1px solid hsl(var(--hue), 100%, 30%);
+    background-color: hsl(var(--hue), 100%, 50%);
+} */
+
+.btn {
+    /* padding: 5px 10px; */
+  width: 140px;
+  height: 35px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 550;
+  color: #000;
+  background-color: #fff;
+  border: 1px solid rgb(49, 156, 49);
+  border-radius: 20px;
+  box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  
+}
+
+.btn:hover {
+    background-color: #2EE59D;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-1.5px);
+  }
+
+.start-btn, .next-btn {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0px 20px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
